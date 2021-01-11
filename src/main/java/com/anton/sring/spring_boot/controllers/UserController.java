@@ -1,7 +1,7 @@
 package com.anton.sring.spring_boot.controllers;
 
 
-import com.anton.sring.spring_boot.service.UserServiceImpl;
+import com.anton.sring.spring_boot.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,7 +15,7 @@ import java.security.Principal;
 public class UserController {
 
     @Autowired
-    private UserServiceImpl userService;
+    private UserService userService;
 
     @GetMapping
     public String getHomePage() {

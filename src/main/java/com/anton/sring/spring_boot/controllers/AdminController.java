@@ -3,8 +3,10 @@ package com.anton.sring.spring_boot.controllers;
 
 import com.anton.sring.spring_boot.models.Role;
 import com.anton.sring.spring_boot.models.User;
+import com.anton.sring.spring_boot.service.RoleService;
 import com.anton.sring.spring_boot.service.RoleServiceImpl;
-import com.anton.sring.spring_boot.service.UserServiceImpl;
+import com.anton.sring.spring_boot.service.UserService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,11 +18,12 @@ import java.util.Set;
 @Controller
 @RequestMapping("/admin")
 public class AdminController {
+
    @Autowired
-    private UserServiceImpl userService;
+    private UserService userService;
 
     @Autowired
-    private RoleServiceImpl roleService;
+    private RoleService roleService;
 
     @GetMapping
     public String showAll(Model model) {
